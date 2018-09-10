@@ -61,17 +61,17 @@ test('Get car', () => {
 test('Get limited car', () => {
   const car = getLimitedCar(15);
 
-  expect(car.speed).toEqual( 0 );
+  expect(car.currentSpeed).toEqual( 0 );
 
   car.faster();
   car.faster();
-  expect(car.speed).toEqual( 15 );
+  expect(car.currentSpeed).toEqual( 15 );
 
   car.slower();
-  expect(car.speed).toEqual( 5 );
+  expect(car.currentSpeed).toEqual( 5 );
 
   car.slower();
-  expect(car.speed).toEqual( 0 );
+  expect(car.currentSpeed).toEqual( 0 );
 });
 
 test('get animal noise', () => {
